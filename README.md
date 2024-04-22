@@ -13,9 +13,9 @@
     ```
 3. start the project by entering the following command.
     ```bash
-    flutter run [execute file path here] -d chrome
+    flutter run lib/app/_/_/interaction/view.blueprint/page/chatgpt_drawer_view/_/view.dart -d chrome
     ```
 
 ## Screenshots
-![]()
+![](https://github.com/juneview-songdo/chatgpt_drawer_view/assets/21379657/caedbf1c-b434-4f36-a19a-f8ab445c44bf)
 
