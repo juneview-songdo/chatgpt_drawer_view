@@ -12,10 +12,6 @@ class NewView extends StatefulWidget {
 }
 
 class NewViewState extends State<NewView> with StateMother {
-  Color activeColor = const Color(0xFF40414f);
-  TextStyle fixedStyle = TextStyle(
-    color: Colors.white,
-  );
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +19,6 @@ class NewViewState extends State<NewView> with StateMother {
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(),
       drawer: Drawer(
-        backgroundColor: const Color(0xff202123),
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -43,19 +38,17 @@ class NewViewState extends State<NewView> with StateMother {
                               child: Container(
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(color: activeColor),
+                                  border: Border.all(color: const Color(0xFF40414f)),
                                 ),
                                 child: ListTile(
                                   onTap: () {},
                                   leading: const Icon(
                                     Icons.add,
-                                    color: Colors.white,
                                   ),
                                   title: Text(
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 1,
                                     'New Chat',
-                                    style: fixedStyle,
                                   ),
                                 ),
                               ),
@@ -68,12 +61,11 @@ class NewViewState extends State<NewView> with StateMother {
                       //   child: Container(
                       //     decoration: BoxDecoration(
                       //       borderRadius: BorderRadius.circular(10),
-                      //       border: Border.all(color: activeColor),
+                      //       border: Border.all(color: const Color(0xFF40414f)),
                       //     ),
                       //     child: ListTile(
                       //       leading: const Icon(
                       //         Icons.add,
-                      //         color: Colors.white,
                       //       ),
                       //       title: Text(
                       //         overflow: TextOverflow.ellipsis,
@@ -92,47 +84,42 @@ class NewViewState extends State<NewView> with StateMother {
                 children: [
                   Container(
                     height: 1,
-                    color: activeColor,
                   ),
                   ListTile(
                     onTap: () {},
                     leading: const Icon(
                       Icons.delete_outline,
-                      color: Colors.white,
                     ),
-                    title: Text('Clear Conversation', style: fixedStyle),
+                    title: Text('Clear Conversation'),
                   ),
                   ListTile(
-                    onTap: () {},
+                    onTap: () {
+                      ThemeModeChanger.switchThemeMode(context);
+                    },
                     leading: Icon(
                       Icons.nightlight_outlined,
-                      color: Colors.white,
                     ),
                     title: Text(
                       'Dark Mode',
-                      style: fixedStyle,
                     ),
                   ),
                   ListTile(
                     leading: const Icon(
                       Icons.discord,
-                      color: Colors.white,
                     ),
-                    title: Text('OpenAI Discord', style: fixedStyle),
+                    title: Text('OpenAI Discord'),
                   ),
                   ListTile(
                     leading: const Icon(
                       Icons.open_in_new,
-                      color: Colors.white,
                     ),
-                    title: Text('Updates and FAQ', style: fixedStyle),
+                    title: Text('Updates and FAQ'),
                   ),
                   ListTile(
                     leading: const Icon(
                       Icons.logout_outlined,
-                      color: Colors.white,
                     ),
-                    title: Text('Log out', style: fixedStyle),
+                    title: Text('Log out'),
                   ),
                 ],
               )
