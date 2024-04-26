@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 
 import '../../../main.dart';
 
@@ -6,13 +7,13 @@ String _noteName = "Note";
 
 T _button00 = T("00", onTap: (BuildContext context) async {
   ////////////////////////////////////////
-  hiveBox.put('key', 123);
+  Hive.box().put('key', 12423);
   ////////////////////////////////////////
 });
 
 T _button01 = T("01", onTap: (BuildContext context) async {
   ////////////////////////////////////////
-  int value = hiveBox.get('key');
+  int value = Hive.box().get('key');
   print(value); // 123
   ////////////////////////////////////////
 });

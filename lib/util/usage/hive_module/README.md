@@ -18,9 +18,9 @@ this module is a wrapper for the [hive](https://pub.dev/packages/hive) package, 
 
 ## Usage
 ```dart
-hiveBox.put('key', 123);
+Hive.box().put('key', 123);
 
-int value = hiveBox.get('key');
+int value = Hive.box().get('key');
 print(value); // 123
 ```
 
